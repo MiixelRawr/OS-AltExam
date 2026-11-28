@@ -1,6 +1,6 @@
 
 import java.util.ArrayList;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 // CIAR, JADE ANNE DENISE C.
 //3ITE
@@ -167,6 +167,7 @@ public class SJFAlgo {
         return result;
     }
 
+    /*
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int processCount;
@@ -255,4 +256,5 @@ public class SJFAlgo {
 
         input.close();
     }
+    */
 }
