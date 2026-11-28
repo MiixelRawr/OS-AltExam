@@ -5,7 +5,6 @@ import java.util.Collections;
 
 public class clook_aurelio {
 
-    // Performs the C-LOOK disk scheduling algorithm
     public static ArrayList<Integer> schedule(
             ArrayList<Integer> requests,
             int head,
@@ -14,7 +13,6 @@ public class clook_aurelio {
         ArrayList<Integer> higher = new ArrayList<>();
         ArrayList<Integer> lower = new ArrayList<>();
 
-        // Separate requests based on the current head position
         for (int request : requests) {
 
             if (request >= head) {
@@ -24,16 +22,13 @@ public class clook_aurelio {
             }
         }
 
-        // Sort the requests
         Collections.sort(higher);
         Collections.sort(lower);
 
         ArrayList<Integer> sequence = new ArrayList<>();
 
-        // Add the starting head position
         sequence.add(head);
 
-        // Moving UP
         if (direction.equalsIgnoreCase("UP")) {
 
             sequence.addAll(higher);
@@ -41,7 +36,6 @@ public class clook_aurelio {
 
         }
 
-        // Moving DOWN
         else if (direction.equalsIgnoreCase("DOWN")) {
 
             Collections.reverse(lower);
@@ -55,7 +49,6 @@ public class clook_aurelio {
         return sequence;
     }
 
-    // Calculate total head movement
     public static int calculateTotalMovement(
             ArrayList<Integer> sequence) {
 
@@ -71,7 +64,6 @@ public class clook_aurelio {
         return total;
     }
 
-    // Calculate average seek distance
     public static double calculateAverageSeek(
             int totalMovement, int numberOfRequests) {
 
